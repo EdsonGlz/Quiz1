@@ -32,3 +32,11 @@ export class HomePage {
   }
 
 }
+
+/* 
+El precio fue obtenido de la api de vivaanuncios especificamente en el atributo que se llama price el cual a su vez tiene otro atributo llamado 
+formattedAmount. 
+
+El precio fue obtenido de la api de vivaanuncios especificamente en el atributo que se llama geo el cual a su vez tiene otros dos atributos llamados 
+name y display name, los cuales son la ciudad y la zona respectivamnte.
+*/
