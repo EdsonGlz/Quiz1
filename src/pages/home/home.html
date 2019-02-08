@@ -1,14 +1,37 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Inmuebles
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <ion-content padding>
+    <ion-grid>
+      <ion-row>
+        <ion-col  *ngFor="let inmueble of inmuebles" col-4>
+          <ion-card>
+            <img *ngIf = "inmueble.hasOwnProperty('pictures')" src="{{inmueble.pictures[0].url}}">
+            <ion-card-content>
+
+                <h2 *ngIf = "inmueble.hasOwnProperty('subject')"> 
+                    {{inmueble.subject}}</h2>
+                <h2 *ngIf = "inmueble.hasOwnProperty('price')">
+                  {{inmueble.price.formattedAmount}}
+                  <p *ngIf = "inmueble.hasOwnProperty('geo')">
+                      {{inmueble.geo.displayName}}, {{inmueble.geo.name}}
+                  </p>
+                </h2> 
+  
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  
+  
+  
+  
+  </ion-content>
 </ion-content>
